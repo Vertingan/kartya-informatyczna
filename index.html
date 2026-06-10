@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablica informatyczna</title>
+
+<style>
+body{
+    background-color: cornflowerblue;
+    font-family: Arial, sans-serif;
+}
+
+.sekcja{
+    padding:12px;
+    margin-top:12px;
+    border-radius:10px;
+    background-color: blue;
+}
+
+.kod{
+    padding:8px;
+    margin-top:6px;
+    background-color: navy;
+    color:white;
+    border-radius:6px;
+}
+
+h1,h2{
+    background-color: blueviolet;
+    color:white;
+    padding:8px;
+    border-radius:6px;
+}
+
+th{
+    background-color: blue;
+    color:white;
+    padding:6px;
+}
+
+td{
+    background-color: skyblue;
+    color:white;
+    padding:6px;
+}
+
+table{
+    background-color: rebeccapurple;
+    border-collapse: collapse;
+    margin-top:5px;
+}
+
+input,textarea,select{
+    margin-top:4px;
+    margin-bottom:6px;
+}
+
+#wynik{
+    margin-top:10px;
+    font-weight:bold;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+<h1>TABLICA INFORMATYCZNA</h1>
+
+<div class="sekcja">
+
+<h2>Złota zasada</h2>
+
+HTML robi formularz, JS pobiera dane.
+
+<div class="kod">
+.value - dane z input<br>
+.checked - checkbox / radio
+</div>
+
+</div>
+
+<div class="sekcja">
+
+<h2>Tabela pól</h2>
+
+<table border="1">
+<tr><th>Typ</th><th>JS</th></tr>
+<tr><td>text</td><td>.value</td></tr>
+<tr><td>number</td><td>.value</td></tr>
+<tr><td>checkbox</td><td>.checked</td></tr>
+<tr><td>radio</td><td>.checked</td></tr>
+<tr><td>textarea</td><td>.value</td></tr>
+<tr><td>select</td><td>.value</td></tr>
+</table>
+
+</div>
+
+<div class="sekcja">
+
+<h2>Formularz</h2>
+
+Imię<br>
+<input id="imie"><br>
+
+Wiek<br>
+<input id="wiek" type="number"><br>
+
+Opis<br>
+<textarea id="opis"></textarea><br>
+
+Klasa<br>
+<select id="klasa">
+<option>3A</option>
+<option>3B</option>
+<option>4A</option>
+<option>4B</option>
+</select><br>
+
+<input type="checkbox" id="zgoda"> zgoda<br><br>
+
+<input type="radio" id="k" name="p"> kobieta
+<input type="radio" id="m" name="p"> mężczyzna
+
+<br><br>
+
+<button id="btn">Wyślij</button>
+
+<div id="wynik">wynik...</div>
+
+</div>
+
+<div class="sekcja">
+
+<h2>Najczęstsze błędy</h2>
+
+<ul>
+<li>brak .value lub .val()</li>
+<li>checkbox jako .value</li>
+<li>złe id</li>
+<li>literówki w JS</li>
+<li>brak zdarzenia click</li>
+<li>zły typ input</li>
+<li>brak Number() dla liczb</li>
+</ul>
+
+</div>
+
+<div class="sekcja">
+
+<h2>Dodatkowe elementy</h2>
+
+<ul>
+<li>walidacja if()</li>
+<li>Number()</li>
+<li>css() zmiana koloru</li>
+<li>on() event jQuery</li>
+<li>html() wyświetlanie wyniku</li>
+</ul>
+
+</div>
+
+<div class="sekcja">
+
+<h2>jQuery - podstawowe metody</h2>
+
+<table border="1">
+<tr><th>Metoda</th><th>Działanie</th></tr>
+<tr><td>.val()</td><td>pobiera wartość</td></tr>
+<tr><td>.html()</td><td>ustawia HTML</td></tr>
+<tr><td>.text()</td><td>ustawia tekst</td></tr>
+<tr><td>.css()</td><td>zmienia styl</td></tr>
+<tr><td>.show()</td><td>pokazuje element</td></tr>
+<tr><td>.hide()</td><td>ukrywa element</td></tr>
+<tr><td>.append()</td><td>dodaje na końcu</td></tr>
+</table>
+
+</div>
+
+<div class="sekcja">
+
+<h2>Zdarzenia</h2>
+
+<table border="1">
+<tr><th>Zdarzenie</th><th>Opis</th></tr>
+<tr><td>click</td><td>kliknięcie</td></tr>
+<tr><td>change</td><td>zmiana wartości</td></tr>
+<tr><td>keyup</td><td>wpisanie znaku</td></tr>
+<tr><td>mouseover</td><td>najechanie myszą</td></tr>
+<tr><td>submit</td><td>wysłanie formularza</td></tr>
+</table>
+
+</div>
+
+<div class="sekcja">
+
+<h2>Warunki if</h2>
+
+<div class="kod">
+if(wiek >= 18){<br>
+&nbsp;&nbsp;pełnoletni<br>
+}else{<br>
+&nbsp;&nbsp;niepełnoletni<br>
+}
+</div>
+
+</div>
+
+<div class="sekcja">
+
+<h2>Pętla for</h2>
+
+<div class="kod">
+for(let i=1;i&lt;=10;i++){<br>
+&nbsp;&nbsp;console.log(i);<br>
+}
+</div>
+
+</div>
+
+<div class="sekcja">
+
+<h2>Operatory</h2>
+
+<table border="1">
+<tr><th>Operator</th><th>Znaczenie</th></tr>
+<tr><td>==</td><td>równe</td></tr>
+<tr><td>!=</td><td>różne</td></tr>
+<tr><td>&gt;</td><td>większe</td></tr>
+<tr><td>&lt;</td><td>mniejsze</td></tr>
+<tr><td>&gt;=</td><td>większe lub równe</td></tr>
+<tr><td>&lt;=</td><td>mniejsze lub równe</td></tr>
+<tr><td>&amp;&amp;</td><td>i</td></tr>
+<tr><td>||</td><td>lub</td></tr>
+</table>
+
+</div>
+
+<div class="sekcja">
+
+<h2>Przydatne funkcje JS</h2>
+
+<ul>
+<li>Number()</li>
+<li>parseInt()</li>
+<li>parseFloat()</li>
+<li>alert()</li>
+<li>prompt()</li>
+<li>confirm()</li>
+<li>Math.random()</li>
+<li>Math.floor()</li>
+</ul>
+
+</div>
+
+<div class="sekcja">
+
+<h2>Najważniejsze selektory CSS</h2>
+
+<table border="1">
+<tr><th>Selektor</th><th>Przykład</th></tr>
+<tr><td>id</td><td>#wynik</td></tr>
+<tr><td>class</td><td>.sekcja</td></tr>
+<tr><td>tag</td><td>div</td></tr>
+<tr><td>grupa</td><td>h1, h2</td></tr>
+</table>
+
+</div>
+
+<div class="sekcja">
+
+<h2>Schemat zadania egzaminacyjnego</h2>
+
+<div class="kod">
+1. Pobierz dane - .val()<br>
+2. Zamień typ - Number()<br>
+3. Oblicz wynik<br>
+4. Sprawdź if()<br>
+5. Wyświetl wynik - .html()<br>
+6. Zmień kolor - .css()
+</div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+
+$("#btn").on("click",function(){
+
+let i=$("#imie").val();
+let w=Number($("#wiek").val());
+let o=$("#opis").val();
+let k=$("#klasa").val();
+let z=$("#zgoda").prop("checked");
+
+let p="";
+
+if($("#k").prop("checked")){
+    p="kobieta";
+}
+
+if($("#m").prop("checked")){
+    p="mężczyzna";
+}
+
+if(i==""){
+    $("#wynik")
+    .css("color","#ff1744")
+    .html("Brak imienia!");
+    return;
+}
+
+$("#wynik")
+.css("color","yellow")
+.html(
+"Imię: "+i+"<br>"+
+"Wiek: "+w+"<br>"+
+"Opis: "+o+"<br>"+
+"Klasa: "+k+"<br>"+
+"Płeć: "+p+"<br>"+
+"Zgoda: "+(z ? "tak" : "nie")
+);
+
+});
+
+});
+</script>
+
+</body>
+</html>
